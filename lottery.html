@@ -10,21 +10,25 @@
 <body>
     <img src="lottery.jpg" alt="">
     <form>
-        <div class="form-group form-group-lg">
-            <label for="currPrize" class="prize">獎品：</label>
-            <input type="text" class="form-control" id="currPrize" placeholder="輸入抽獎名稱">
+        <div class="form-group form-group-lg" style="text-align: center;">
+            <!-- <label for="currPrize" class="prize">獎品：</label> -->
+            <input type="text" class="" id="currPrize" placeholder="輸入抽獎名稱">
         </div>
-        <h3>抽獎者：</h3>
-        <div class="form-group form-group-lg" id="usersList"></div>
-        <button type="button" class="btn btn-primary" id="goBtn">開始抽</button>
-        <button type="button" class="btn btn-danger" id="stopBtn">停止！</button>
+        <!-- <h3>抽獎者</h3> -->
+        <div style="text-align: center;" id="center">
+            <div class="form-group form-group-lg people" id="usersList"></div>
+            <button type="button" class="btn btn-primary" id="goBtn">開始抽</button>
+            <button type="button" class="btn btn-danger" id="stopBtn">停止！</button>
+        </div>
     </form>
     <form>
         <div class="form-group form-group-lg">
             <!-- <label for="addUserInput" class="prize">加入抽獎者：</label> -->
             <input type="text" class="form-control" id="addUserInput" placeholder="加入抽獎者 ( 用,分隔多人 )" style="width: 100%;">
         </div>
+        <div style="text-align: center;">
         <button type="button" class="btn btn-primary" id="addUser">加入</button>
+        </div>
     </form>
     <script>
     (function() {
