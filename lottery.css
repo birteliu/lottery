@@ -77,3 +77,12 @@ input {
     text-align: center;
     width: 100%;
 }
+@media (max-width: 600px) {
+	img {
+		width: 150%;
+		margin-left: -25%; 
+	}
+	form {
+	  margin: 20px 10%;
+	}
+}
