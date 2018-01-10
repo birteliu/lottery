@@ -27,7 +27,7 @@ img {
   width: 100%;
 }
 form {
-  margin: 20px 20%;
+  margin: 20px 1%;
 }
 .prize {
   font-size: 1.5em; 
@@ -61,7 +61,6 @@ input {
 .people {
 	  font-weight: bold;
     width: 100%;
-    min-width: 120px;
     padding: 5px 1em 0px 10px;
     font-size: 1.15em;
 }
@@ -77,12 +76,20 @@ input {
     text-align: center;
     width: 100%;
 }
+.prizename {
+	max-width: 50%;
+}
+#goBtn, #stopBtn, #addUser {
+	max-width: 50%;
+}
+#addUserInput {
+	width: 100%; 
+	max-width: 50%; 
+	margin: auto;
+}
 @media (max-width: 600px) {
 	img {
 		width: 150%;
 		margin-left: -25%; 
-	}
-	form {
-	  margin: 20px 10%;
 	}
 }
