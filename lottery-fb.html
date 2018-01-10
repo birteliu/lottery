@@ -12,10 +12,11 @@
     <img src="fb.jpg" alt="">
     <form>
         <div class="form-group form-group-lg" style="text-align: center;">
-            <!-- <label for="currPrize" class="prize">獎品：</label> -->
-            <input type="text" class="prizename" id="currPrize" placeholder="輸入抽獎名稱">
+            <!-- <label class="prize" id="currPrize">獎品名稱：Webduino Smart 開發板 x1</label> -->
+            <input type="text" class="prizename" id="currPrize" placeholder="輸入抽獎名稱" value=" Webduino Smart 開發板 x1">
+            <br>
+            <p id="result"></p>
         </div>
-        <!-- <h3>抽獎者</h3> -->
         <div style="text-align: center;" id="center">
             <!-- <div class="form-group form-group-lg people" id="usersList"></div> -->
             <button type="button" class="btn btn-primary" id="goBtn">開始抽</button>
@@ -79,7 +80,7 @@
             }
         }
 
-        var speed = 0.1,
+        var speed = 0.01,
             currLabelClass = 'label-success',
             intv;
         goBtn.addEventListener('click', function() {
@@ -103,11 +104,14 @@
             intv = 0;
             stopBtn.style.display = 'none';
             goBtn.style.display = 'inline';
-            alert('恭喜' + usersList.querySelector('.' + currLabelClass).innerText + '抽中了' + currPrize.value)
-            // setTimeout("alert('对不起, haorooms博客要你等候多时')", 1 )
+            result.style.display = 'inline-table';
+            currPrize.style.display = 'none';
+            document.getElementById("result").innerHTML = ('恭喜' + usersList.querySelector('.' + currLabelClass).innerText + '抽中' + currPrize.value);
+            // alert('恭喜' + usersList.querySelector('.' + currLabelClass).innerText + '抽中了' + currPrize.value)
         });
 
-        
+
+
     }());
     </script>
     
